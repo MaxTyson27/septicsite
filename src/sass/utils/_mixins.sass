@@ -1,0 +1,43 @@
+=flex-center ()
+  display: flex
+  justify-content: center
+  align-items: center
+
+=center-item ($position)
+  position: $position
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=center-item-y ($position: absolute)
+  position: $position
+  top: 50%
+  transform: translateY(-50%)
+
+=center-item-x ($position: absolute)
+  position: $position
+  left: 50%
+  transform: translateX(-50%)
+
+=font ($name,$w, $pathWoff2, $pathWoff)
+  @font-face
+    font:
+      family: $name
+      weight: $w
+      style: normal
+      display: swap
+    src: local($name),
+    url($pathWoff2) format('woff2'),
+    url($pathWoff) format('woff')
+
+=bgp($path, $s, $pos1, $pos2 )
+  background:
+    repeat: no-repeat
+    image: url($path)
+    size: $s
+    position: $pos1 $pos2
+
+%font-400
+  font:
+    family: 'Romanovsky'
+    weight: 400
