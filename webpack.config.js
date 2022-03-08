@@ -2,7 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack')
 
@@ -20,7 +20,7 @@ const optimization = () => {
 
   if (isProd) {
     configObj.minimizer = [
-      new OptimizeCssAssetsWebpackPlugin(),
+      new CssMinimizerPlugin(),
       new TerserWebpackPlugin(),
     ]
   }
