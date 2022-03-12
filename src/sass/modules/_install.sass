@@ -1,0 +1,32 @@
+.install
+  padding: 75px 0
+  +bgp('../images/install/install-circle.png', 1135px, left, bottom)
+  &__title
+    margin-bottom: 45px
+  &__list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    row-gap: 45px
+  &__item
+    padding: 20px
+    padding-bottom: 10px
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    background-color: #fff
+    max-width: 360px
+    width: 100%
+    background-size: auto
+    background-position: right 5px top 10px
+    background-repeat: no-repeat
+    &-icon
+      margin-bottom: 15px
+    &-step
+      color: $sec
+      @extend %rob-700
+      +fz(22px,26px)
+      margin-bottom: 10px
+    &-text
+      margin-bottom: 5px
+      max-width: 202px

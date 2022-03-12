@@ -1,0 +1,42 @@
+.montage-form
+  padding: 75px 0
+  +bgp('../images/montage-form/montage-form-bg.png', cover, center, top)
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 810px
+    height: 100%
+    right: -50px
+    top: 0
+    bottom: 0
+    background-repeat: no-repeat
+    background-image: url('../images/montage-form/montage-form-circle.png')
+  &::before
+    content: ''
+    position: absolute
+    width: 100px
+    height: 275px
+    left: 15px
+    bottom: -15px
+    background-repeat: no-repeat
+    background-image: url('../images/montage-form/montage-form-decor.png')
+  &__content
+    color: #fff
+  &__title
+    max-width: 678px
+    margin-bottom: 25px
+  &__text
+    max-width: 381px
+    margin-bottom: 25px
+  form
+    +flex(center, start, 20px)
+    margin-bottom: 10px
+  &__btn
+    +btn(230px, 55px)
+    +fz(18px, 21px)
+  &__input
+    +input(230px, 55px)
+    +fz(18px, 21px)
+  &__policy
+    +fz(14px, 16px)

@@ -1,0 +1,35 @@
+.technic
+  padding: 75px 0
+  +bgp('../images/technic/technic-circle.png', contain, left, bottom)
+  &__title
+    margin-bottom: 45px
+    span
+      color: $sec
+  &__list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    row-gap: 40px
+  &__item
+    display: flex
+    align-items: center
+    column-gap: 35px
+    &:last-child
+      .technic__item-title
+        max-width: 285px
+      .technic__item-text
+        max-width: 276px
+    &-title
+      +fz(22px,26px)
+      @extend %rob-700
+      margin-bottom: 15px
+      max-width: 260px
+    &-text
+      max-width: 260px
+    &-image
+      background: #F9F9F9
+      box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.1)
+      width: 160px
+      height: 160px
+      border-radius: 50%
+      +flex(center, center, 0)

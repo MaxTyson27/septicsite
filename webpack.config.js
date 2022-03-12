@@ -42,9 +42,17 @@ const plugins = () => {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'dist'), }
+        { 
+          from: path.resolve(__dirname, 'src/assets'), 
+          to: path.resolve(__dirname, 'dist'), 
+        },
+        {
+          from: path.resolve(__dirname, 'src/images'),
+          to:   path.resolve(__dirname, 'dist/images')
+        }
       ]
     }),
+
   ]
 
   if (isProd) {
@@ -105,7 +113,7 @@ module.exports = {
           {
             loader: 'pug-html-loader',
             options: {
-              pretty: true
+              pretty: true,
             }
 
           }
@@ -120,20 +128,24 @@ module.exports = {
               hmr: isDev
             },
           },
-          "css-loader",
+          "css-loader", "postcss-loader"
         ],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
-      {
-        test: /\.png|jpg|jpeg|svg|gif$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext][query]',
-        }
-      },
+      // {
+      //   test: /\.sass$/,
+      //   use: [ 'style-loader', 'postcss-loader' ]
+      // },
+      // {
+      //   test: /\.png|jpg|jpeg|svg|gif$/i,
+      //   type: 'asset/resource',
+      //   generator: {
+      //     filename: 'images/[name][ext][query]',
+      //   }
+      // },
       {
         test: /\.woff|woff2$/i,
         type: 'asset/resource',
