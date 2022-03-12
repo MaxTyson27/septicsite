@@ -1,0 +1,50 @@
+.example
+  padding: 75px 0
+  margin-bottom: 20px
+  // +bgp('../images/example/circle.png', contain, top, right)
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    width: 1255px
+    height: 100%
+    background-image: url('../images/example/example-circle.png')
+    background-repeat: no-repeat
+    z-index: 1
+  &__title
+    text-align: center
+    margin-bottom: 45px
+    position: relative
+    z-index: 2
+  &__inner
+    +flex(center, center, 40px)
+  &__item
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.1)
+    background-color: #fff
+    border-radius: 10px
+    padding-bottom: 30px
+    max-width: 260px
+    position: relative
+    z-index: 2
+    &::before
+      content: ''
+      +center-item(absolute)
+      width: calc( 100% - 20px )
+      height: calc( 100% - 24px)
+      border-radius: 10px
+      border: 1px solid #C2C2C2
+      z-index: 2
+    img
+      margin-bottom: 15px
+    &-text
+      text-align: center
+      margin: 0 auto 15px
+      @extend  %rob-700
+      max-width: 200px
+    &-link
+      +btn(200px, 55px)
+      position: relative
+      z-index: 2
+      margin: 0 auto

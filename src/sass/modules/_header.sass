@@ -1,1 +1,31 @@
 .header
+  padding: 15px 0
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__contacts
+    display: flex
+    align-items: center
+    column-gap: 20px
+    &-box
+      display: flex
+      flex-direction: column
+      row-gap: 10px
+    &-btn
+      +btn(175px, 55px)
+    &-link
+      display: flex
+      column-gap: 6px
+      span
+        @extend %rob-700
+.menu
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    column-gap: 20px
+    &-link
+      font-size: 14px
+      line-height: 16px
+      color: #1B1B1B

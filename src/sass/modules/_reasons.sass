@@ -1,0 +1,62 @@
+.reasons
+  color: #fff
+  margin-bottom: 110px
+  &__inner
+    padding-top: 75px
+    +bgp('../images/reasons/reasons-bg.jpg', cover, center, top)
+    height: 664px
+  &__title
+    margin-bottom: 35px
+    text-align: center
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    row-gap: 25px
+  &__item
+    max-width: 320px
+    &-title
+      +fzc(22px,26px, $sec)
+      margin-bottom: 10px
+      @extend %rob-700
+  &__form
+    max-width: 960px
+    background-color: #fff
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    margin: 60px auto 0
+    padding-top: 45px
+    padding-bottom: 50px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      left: -175px
+      top: 28px
+      background-repeat: no-repeat
+      background-image: url('../images/reasons/key.png')
+      width: 280px
+      height: 280px
+    &-inputs
+      +flex(center, center, 15px)
+      margin-bottom: 15px
+    &-input
+      +input2(230px, 48px)
+      &::placeholder
+        font-size: 16px
+        line-height: 19px
+    &-title
+      color: $prim
+      max-width: 750px
+      text-align: center
+      margin: 0 auto 30px
+    &-text
+      color: $prim
+      text-align: center
+      margin-bottom: 20px
+    &-btn
+      +btn(230px, 48px)
+    &-policy
+      +fzc(10px,12px,$prim)
+      text-align: center

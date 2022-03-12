@@ -1,12 +1,22 @@
 body
-  @extend %font-400
+  @extend %rob-400
   font-size: 16px
-  color: $primary
+  color: $prim
+  line-height: 19px
 
 .wrapper
   overflow: hidden
 
 .container
-  max-width: 1200px
+  max-width: 1180px
   padding: 0 10px
   margin: 0 auto
+
+h2
+  @extend %rob-700
+  +fz(36px, 42px)
+
+input
+  &::placeholder
+    color: #858585
+    +fz(18px,21px)

@@ -1,0 +1,38 @@
+.catalog-form
+  +bgp('../images/catalog-form/catalog-form-bg.png', cover, center, center)
+  &__inner
+    padding: 75px 0
+    +bgp('../images/catalog-form/catalog-form-img.png', contain, right 80px, top)
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 150px
+      height: 370px
+      background-image: url('../images/catalog-form/catalog-form-decor.png')
+      background-repeat: no-repeat
+  &__content
+    color: #fff
+  &__title
+
+    margin-bottom: 25px
+    max-width: 576px
+  &__text
+    max-width: 314px
+
+    margin-bottom: 25px
+  &__input
+    +input(235px, 55px)
+    +fz(18px, 21px)
+  &__btn
+    +btn(235px, 55px)
+    +fz(18px, 21px)
+  &__box
+    display: flex
+    align-items: center
+    column-gap: 20px
+    margin-bottom: 10px
+  &__policy
+    +fz(14px, 16px)

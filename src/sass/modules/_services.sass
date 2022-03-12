@@ -1,0 +1,61 @@
+.services
+  background: #F4F6F8
+  padding: 75px 0
+  +bgp('../images/services/services-circle.png', contain, left, bottom)
+  &__title
+    text-align: center
+    margin-bottom: 45px
+  &__list
+    +card()
+  &__item
+    max-width: 240px
+    width: 100%
+    &:nth-child(4)
+      .services__item-title
+        margin-bottom: 47px
+    &:nth-child(-n+3)
+      .services__item-image
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          right: 0
+          bottom: 0
+          width: 89px
+          height: 89px
+          background-image: url('../images/services/services-keys.png')
+    &-title
+      +fz(20px, 23px)
+      @extend %rob-700
+      margin-bottom: 25px
+      span
+        color: #C9C9C9
+    &-image
+      height: 220px
+      background: #F9F9F9
+      border-radius: 10px
+      +flex-center
+      margin-bottom: 15px
+    &-link
+      +btn(100%, 55px)
+      +fz(18px, 21px)
+    &-box
+      display: flex
+      justify-content: space-between
+      margin-bottom: 15px
+      &-title
+        padding-left: 28px
+        position: relative
+        color: #9A9696
+        &::before
+          content: ''
+          position: absolute
+          width: 21px
+          height: 21px
+          left: 0
+          top: 0
+          background-image: url('../images/catalog/monet.svg')
+          background-size: cover
+      &-num
+        color: $sec
+        @extend %rob-700

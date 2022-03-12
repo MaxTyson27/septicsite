@@ -1,0 +1,16 @@
+section.different
+  .different__wrapper
+    .container
+      .different__inner
+        h2.different__title Чем отличается септик от выгребной ямы?
+        .different__box
+          ul.different__list
+            - var okayList = ['Современная канализационная система','Полностью отстутсвует запах', 'Соответствует экологическим нормам', 'Удобно в любое время года', 'Средний срок службы - до 100 лет', 'Соответствует законам РФ', 'Нет больших затрат на обслуживание']
+            each val in okayList
+              li.different__item 
+                p.different__item-text= val
+          ul.different__list
+            - var closeList = ['Выгребная яма из колец','Постоянный запах', 'Вредит окружающей среде', 'Некомфортно в плохую погоду', 'Требуется постоянная чистка', 'Нарушение законодательства РФ', 'Большие сложности в обслуживании']
+            each val in closeList
+              li.different__item 
+                p.different__item-text= val

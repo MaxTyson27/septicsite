@@ -1,0 +1,13 @@
+section.catalog-form
+  .container
+    .catalog-form__inner
+      .catalog-form__content
+        h2.catalog-form__title Получите каталог с актуальными ценами прямо сейчас!
+        p.catalog-form__text Оставьте заявку и получите полный каталог с ценами прямо сейчас
+        form.catalog-form__form(action="mail.php")
+          .catalog-form__box
+            input.catalog-form__input.input-phone(type="text" name="phone" placeholder='+7(999) 999-99-99' required)
+            button.catalog-form__btn(type="submit") Оставить заявку
+          p.catalog-form__policy Отправляя данные, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности</a>
+      //- .catalog-form__image
+      //-   img(src="../images/catalog-form/catalog-form-img.png", alt="")

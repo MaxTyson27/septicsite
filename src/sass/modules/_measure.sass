@@ -1,0 +1,35 @@
+.measure
+  padding: 75px 0
+  background-color: $sec
+  &__inner
+    +bgp('../images/measure/measure-image.png', contain, right, center)
+  &__content
+    padding: 20px
+    padding-bottom: 0
+    &-wrapper
+      max-width: 540px
+      background-color: #fff
+      box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.1)
+      border-radius: 10px
+      img
+        margin-left: auto
+  &__title
+    margin-bottom: 25px
+  &__text
+    max-width: 314px
+    margin-bottom: 25px
+  &__form
+    display: flex
+    column-gap: 20px
+    align-items: center
+    margin-bottom: 10px
+  &__input
+    +input(240px, 55px)
+    +fz(18px, 21px)
+    background: #F4F6F8
+  &__button
+    +btn(240px, 55px)
+    +fz(18px, 21px)
+  &__policy
+    letter-spacing: -0.025em
+    +fzc(14px, 16px, #878787)

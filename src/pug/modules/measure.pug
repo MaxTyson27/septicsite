@@ -1,0 +1,12 @@
+section.measure
+  .container
+    .measure__inner
+      .measure__content-wrapper
+        .measure__content
+          h2.measure__title Заполните форму и получите бесплатный замер от опытного инженера!
+          p.measure__text Наш менеджер скоро свяжется и назначит удобное для вас время замера
+          form.measure__form(action="mail.php")
+            input.measure__input.input-phone(type="text" placeholder='+7(999) 999-99-99' required)
+            button.measure__button(type="submit") Оставить заявку
+          p.measure__policy Отправляя данные, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности</a>
+        img(src="../images/measure/measure-ruler.png", alt="")

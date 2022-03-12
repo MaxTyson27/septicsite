@@ -1,0 +1,70 @@
+.catalog
+  padding: 75px 0
+  +bgp('../images/catalog/catalog-circle.png', contain, top, right)
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    z-index: 1
+    left: 0px
+    bottom: -100px
+    width: 380px
+    height: 1050px
+    background-image: url('../images/catalog/catalog-decor.png')
+    background-repeat: no-repeat
+
+  &__title
+    text-align: center
+    margin-bottom: 40px
+  &__list
+    +card()
+    position: relative
+    z-index: 2
+  &__item
+    max-width: 240px
+    width: 100%
+    &-title
+      +fz(20px, 23px)
+      @extend %rob-700
+      margin-bottom: 20px
+      span
+        color: #C9C9C9
+  &__image
+    height: 220px
+    background: #F9F9F9
+    border-radius: 10px
+    +flex-center
+    margin-bottom: 20px
+  &__info
+    display: flex
+    flex-direction: column
+    row-gap: 15px
+    margin-bottom: 20px
+    &-num
+      color: #9A9696
+    &-price
+      color: $sec
+      @extend %rob-700
+    &-title
+      color: #9A9696
+      padding-left: 28px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 20px
+        left: 0
+        top: 0
+        background-image: url('../images/catalog/monet.svg')
+        background-size: cover
+    &-box
+      display: flex
+      justify-content: space-between
+      &:first-child
+        p
+          &::before
+            background-image: url('../images/catalog/person.svg')
+  &__btn
+    +btn(100%, 55px)
+    +fz(18px, 21px)

@@ -1,3 +1,15 @@
 header.header
   .container 
     .header__inner
+      +logo
+      +menu('Каталог септиков', 'Услуги', 'Отзывы', 'Примеры работ', 'Септики в рассрочку')
+      .header__contacts
+        a.header__contacts-btn.modal-link(href="#") Заказать звонок
+        .header__contacts-box
+          a.header__contacts-link(href="#")
+            img(src="../images/icons/mark.svg", alt="")
+            span Санкт-Петербург
+          a.header__contacts-link(href="tel:79205670759")
+            img(src="../images/icons/phone.svg", alt="")
+            span +7 (920) 567-07-59
+

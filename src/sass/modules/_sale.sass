@@ -1,0 +1,52 @@
+.sale
+  +bgp('../images/1s/main.png', cover, top, center)
+  margin-bottom: 75px
+  &__wrapper
+    padding: 70px 0
+    +bgp('../images/1s/img.png', 700px, bottom, right 60px)
+  &__title
+    +fz(40px, 47px)
+    max-width: 540px
+    margin-bottom: 25px
+    span
+      color: $sec
+  &__content
+    &-items
+      display: flex
+      align-items: center
+      column-gap: 30px
+      margin-bottom: 30px
+    &-item
+      padding-left: 55px
+      position: relative
+      &:first-child
+        p
+          max-width: 130px
+      p
+        +fz(18px,21px)
+        max-width: 153px
+        &::after
+          content: ''
+          position: absolute
+          width: 40px
+          height: 5px
+          background-color: $sec
+          left: 0
+          top: 9px
+  &__form
+    &-title
+      +fz(22px, 26px)
+      @extend %rob-700
+      max-width: 462px
+      margin-bottom: 10px
+    &-text
+      +fz(18px,21px)
+      max-width: 281px
+      margin-bottom: 30px
+    &-box
+      +flex(center, start, 20px)
+      margin-bottom: 10px
+    &-input
+      +input(235px, 55px)
+    &-button
+      +btn(235px, 55px)

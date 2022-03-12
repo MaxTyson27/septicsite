@@ -1,0 +1,32 @@
+.process
+  padding: 75px 0
+  +bgp('../images/process/process-circle.png', contain, left, bottom)
+  &__title
+    margin-bottom: 40px
+    span
+      color: $sec
+  &__list
+    +flex(center, space-between, 0px)
+  &__item
+    &:not(:last-child)
+      padding-right: 30px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 15px
+        height: 26px
+        right: 0
+        top: 60%
+        transform: translateY(-60%)
+        background-image: url('../images/process/process-arrow.svg')
+        background-size: cover
+    img
+      margin-bottom: 15px
+    &-title
+      +fz(22px, 26px)
+      @extend %rob-700
+      margin-bottom: 15px
+    &-text
+      max-width: 340px
+      height: 57px
